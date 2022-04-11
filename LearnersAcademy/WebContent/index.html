@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<link rel="stylesheet" href="style.css">
+        <!-- Latest compiled and minified CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Latest compiled JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript" src="asd.js"></script>
+        <title>LearnersAcademy</title>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container" style="margin-top:3em">
+    	<h3>View a Master-list</h3>
+        <form action="My_Servlet" method="post">
+			<select name="select">
+			    <option value="select list">Select Master List</option>
+			    <option value="teachers">Teachers</option>
+			    <option value="classes">classes</option>
+			    <option value="subjects">Subjects</option>
+			    <option value="assigned_teachers">Assigned List</option>
+			    <option value="students">Students</option>
+			</select>
+			<input type="submit">
+        </form>
+        <h3>Insert New Data</h3>
+        <form action="Servlet_add" method="post">
+        	<select name="select">
+			    <option value="select list">Select Category</option>
+			    <option value="teachers">Teachers</option>
+			    <option value="classes">classes</option>
+			    <option value="subjects">Subjects</option>
+			</select>
+		        <input type="text" name="name" placeholder="Enter name"/>
+		        <input type="submit" value="Add New">
+        </form>
+        <h3>Delete Data</h3>
+        <form action="Servlet_delete" method="post">
+        	<select name="select">
+			    <option value="select table">Select table</option>
+			    <option value="teachers">Teacher</option>
+			    <option value="classes">Class</option>
+			    <option value="subjects">Subject</option>
+			    <option value="students">Student</option>
+			    <option value="assigned_teachers">Assigned Teacher's List</option>
+			</select>
+		        <input type="text" name="row" placeholder="Enter row number"/>
+		        <input type="submit" value="Delete">
+        </form>
+        <h3>Assign Data</h3>
+        <form action="Servlet_assign" method="post">
+				<input type="text" name="subject" placeholder="Enter subject"/>
+				<input type="text" name="classes" placeholder="Enter class"/>
+				<input type="text" name="teacher" placeholder="Enter teacher"/>
+		        <input type="submit" value="Assign">
+        </form>
+        <h3>Assign New Student</h3>
+        <form action="Servlet_assignStudent" method="post">
+				<input type="text" name="student" placeholder="Enter name"/>
+				<input type="text" name="classes" placeholder="Enter class"/>
+		        <input type="submit" value="Add New">
+        </form>
+        <h3>View Class Teachers/Students</h3>
+        <form action="Servlet_classReport" method="post">
+        	<select name="select1">
+        		<option value="select list">Select Class</option>
+			    <option value="mechanical">Mechanical</option>
+			    <option value="electrical">Electrical</option>
+			    <option value="civil">Civil</option>	    
+			</select>
+			<select name="select2">
+        		<option value="select list">Select Class</option>
+			    <option value="teacher">Teacher</option>
+			    <option value="student">Student</option>    
+			</select>
+		        <input type="submit" value="View List">
+        </form>
+    </div>
+</body>
+</html>
