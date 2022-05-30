@@ -1,0 +1,27 @@
+<form #addItem="ngForm" (ngSubmit)="editProduct()">
+    <div class="form-group">
+        <label for="id"></label>
+        <input type="number" class="form-control" required [(ngModel)]="product.id" name="id">
+    </div>
+    <div class="form-group">
+      <label for="itemName"></label>
+      <input type="text" class="form-control" required [(ngModel)]="product.name" name="name">
+    </div>
+    <div class="form-group">
+      <label for="itemPrice"></label>
+      <input type="number" class="form-control" required [(ngModel)]="product.price" name="price">
+    </div>
+    <div class="form-group">
+      <label for="category"></label>
+      <input type="text" class="form-control" required [(ngModel)]="product.category" name="category">
+    </div>
+    <div class="form-group">
+      <label for="imgname"></label>
+      <input type="text" class="form-control" required [(ngModel)]="product.imgname" name="imgname">
+    </div>
+    <div class="form-group">
+      <label for="imgageurl"></label>
+      <input type="text" class="form-control" required [(ngModel)]="product.imageurl" name="imgageurl">
+    </div>
+    <button class="btn btn-primary">Update</button>
+  </form>

@@ -1,7 +1,6 @@
 package com.simplilearn.sportyshoes;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,4 +25,8 @@ public class ProductService {
 	public void delete(Integer id) {
 		repo.deleteById(id);
 	}
+	
+	public List<Product> fetchByCategory(String category) {
+		   return repo.findByCategory(category);
+		}
 }
