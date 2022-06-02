@@ -1,0 +1,21 @@
+<form #addItem="ngForm" (ngSubmit)="addProduct()">
+    <div class="form-group">
+      <label for="itemName"></label>
+      <input type="text" class="form-control" required [(ngModel)]="product.name" name="itemName" placeholder="Item Name">
+      <label for="itemPrice"></label>
+      <input type="text" class="form-control" required [(ngModel)]="product.price" name="itemPrice" placeholder="Item Price">
+      <label for="imgname"></label>
+      <input type="text" class="form-control" required [(ngModel)]="product.imgname" name="imgname" placeholder="Image Name">
+    </div>
+    <div class="form-group">
+      <label for="category"></label>
+      <select class="form-select" required [(ngModel)]="product.category" name="category">
+        <option *ngFor="let c of category | async" [ngValue]="c.category">{{ c.category }}</option>
+      </select>
+    </div>
+    <div class="form-group" style="margin-top:1em">
+      <label for="imageurl">/assets/category/image name.jpg</label>
+      <input type="text" class="form-control" required [(ngModel)]="product.imageurl" name="imageurl">
+    </div>
+      <button class="btn btn-primary" style="margin-top: 1.5em;">Submit</button>
+  </form>
